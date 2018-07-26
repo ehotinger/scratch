@@ -10,4 +10,4 @@ With `Make`:
 
 With Docker:
 
-`docker build -t ehotinger/scratch .`
+`docker build -t ehotinger/scratch .` 
