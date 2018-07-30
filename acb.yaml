@@ -1,5 +1,5 @@
 steps:
-  - run: bash ./pre.sh
+  - run: bash ls
   - run: build -f Dockerfile .
   - run: golang:1.10 make build
   - run: bash ls
