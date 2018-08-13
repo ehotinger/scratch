@@ -1,0 +1,8 @@
+steps:
+  - cmd: img build -f Dockerfile -t ehotinger.azurecr.io/scratch-img .
+    user: root
+    privileged: true
+
+  - cmd: img push ehotinger.azurecr.io/scratch-img
+    user: root
+    privileged: true
