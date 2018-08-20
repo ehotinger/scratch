@@ -1,0 +1,6 @@
+steps:
+  - id: my-WebSite
+    build: >
+      -t {{.Run.Registry}}/scratch:latest
+      -t {{.Run.Registry}}/scratch:{{.Run.ID}}
+      .
