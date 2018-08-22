@@ -4,7 +4,7 @@ RUN apk add --no-cache \
 	make
 
 FROM gobuild-base AS base
-WORKDIR /go/src/github.com/scratch/scratch
+WORKDIR /go/src/github.com/ehotinger/scratch
 COPY . .
 RUN make static && mv scratch /usr/bin/scratch
 
