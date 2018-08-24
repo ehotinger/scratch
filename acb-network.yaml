@@ -1,0 +1,9 @@
+steps:
+- build: -t ehotinger.azurecr.io/scratchy .
+- id: app
+  cmd: nginx:alpine
+  ports: 
+    - 80:80
+  detach: true
+- cmd: byrnedo/alpine-curl --url http://app:80
+- push: [ehotinger.azurecr.io/scratchy]
