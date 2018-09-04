@@ -1,0 +1,2 @@
+steps:
+  - build: -f Dockerfile . -t testing:{{.Values.name}}
