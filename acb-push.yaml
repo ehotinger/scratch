@@ -1,0 +1,3 @@
+steps:
+  - build: -f Dockerfile . -t {{.Run.Registry}}/scratchy:latest
+  - push: ['{{.Run.Registry}}/scratchy:latest']
