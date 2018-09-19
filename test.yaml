@@ -1,0 +1,17 @@
+version: v1.0.0
+
+steps:
+  - cmd: addemup 5 6
+    disableWorkingDirectory: true
+    # workingDirectory: "/foo"
+
+    workingDirectory: "foo"
+    #/workspace/foo
+    
+    # potential
+    # -> DisableWorkingDirectoryOverride =>
+    # /foo
+
+    # current
+    # DisableWorkingDirectoryOverride =>
+    # ""

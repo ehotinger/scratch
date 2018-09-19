@@ -1,1 +1,6 @@
 name: eric
+env:
+  - name: blah
+    value: foo
+  - name: merp
+    value: carper
