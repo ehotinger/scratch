@@ -1,0 +1,4 @@
+steps:
+  - build: -t flag .
+
+  - cmd: flag --values {{.ValuesJSON}} --run {{.RunJSON}}
