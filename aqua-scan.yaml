@@ -1,0 +1,20 @@
+secrets:
+  - id: key
+    keyvault: https://ehotingerwuskv.vault.azure.net/secrets/aquakey
+
+# https://github.com/aquasecurity/microscanner
+steps:
+  - build: . -t {{.Run.Registry}}/image:{{.Run.ID}}
+
+  # Create a new Dockerfile with the scanner added to the previous image.
+  - cmd: |
+      bash -c 'echo "FROM {{.Run.Registry}}/image:{{.Run.ID}}
+      ADD https://get.aquasec.com/microscanner /
+      RUN chmod +x /microscanner
+      RUN /microscanner {{.Secrets.key}}" > scan.Dockerfile'
+
+  # Scan the image using the Dockerfile I created.
+  - build: . -f scan.Dockerfile -t scanned
+
+  # Only push the image if the scan was successful.
+  - push: ["{{.Run.Registry}}/image:{{.Run.ID}}"]
