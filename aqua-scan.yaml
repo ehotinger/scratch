@@ -1,8 +1,9 @@
+version: v1.0.0
+
 secrets:
   - id: key
-    keyvault: https://ehotingerwuskv.vault.azure.net/secrets/aquakey/73c2eb0e60604ee88c5a5bc302cbcdb2
+    keyvault: https://ehotingerwuskv.vault.azure.net/secrets/aquakey
 
-# https://github.com/aquasecurity/microscanner
 steps:
   - build: . -t {{.Run.Registry}}/image:{{.Run.ID}}
 
