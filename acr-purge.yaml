@@ -1,0 +1,2 @@
+steps:
+  - cmd: {{.Run.Registry}}/acr purge --repository "ubuntu" --ago 1d -r {{.Run.Registry}}
