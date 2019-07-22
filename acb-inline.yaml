@@ -1,3 +1,5 @@
+version: v1.0.0
+
 steps:
   - cmd: |
       bash -c 'echo "FROM golang:1.10-alpine AS gobuild-base

@@ -1,3 +1,5 @@
+version: v1.0.0
+
 steps:
   - build: -f Dockerfile . -t {{.Run.Registry}}/scratchy:latest
   - push: ['{{.Run.Registry}}/scratchy:latest']

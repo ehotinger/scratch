@@ -1,3 +1,5 @@
+version: v1.0.0
+
 steps:
 - build: -t ehotinger.azurecr.io/scratchy .
 - id: app

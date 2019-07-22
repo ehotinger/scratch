@@ -1,3 +1,5 @@
+version: v1.0.0
+
 # NB: without concatenating -f correctly, the Dockerfile from the root would be chosen instead.
 steps:
   - build: ./functions/addemup -t addemup

@@ -1,3 +1,5 @@
+version: v1.0.0
+
 steps:
   - cmd: img build -f Dockerfile -t ehotinger.azurecr.io/scratch-img .
     user: root
